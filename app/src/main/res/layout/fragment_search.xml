@@ -1,16 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".search">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Search"
-        android:gravity="center"
-        android:textSize="40sp"/>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view_background"
+        android:layout_width="376dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="50dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:queryBackground="@color/design_default_color_on_primary"
+        app:queryHint="Search"
+        />
 
-</FrameLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="261dp"
+            android:layout_height="64dp"
+            android:textSize="25dp"
+            android:layout_marginStart="10dp"
+            android:text="Word of the Day" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Help"
+            android:layout_marginStart="10dp"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="201dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:hint="I asked Dorji for help"
+            />
+
+
+        <!-- Add your content within the CardView here -->
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+
+            />
+
+        <TextView
+            android:id="@+id/bottomText"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="10dp"
+            android:text="Please Install Dzongkha Keyboard to search. Tab on the word while searching."
+            android:textSize="19dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
